@@ -1,24 +1,24 @@
 .keypad {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
 }
 .keypad button{
-    width: 100px;
-    height: 100px;
-    margin: 5px;
-    border-radius: 10px;
-    font-size: 25px;
+    width: 150px;
+    height: 90px;
+    margin: 20px;
+    font-size: 32px;
     font-weight: bold;
     cursor: auto;
     animation: none;
+    background-color: #8fffff;
 
 }
 .keypad .row{
-    margin: 10px;
+    margin: 30px;
 }
 .keyClicked{
-    background-color: #4272f5;
+    background-color: #76c51c;
 }
 .channels {
     margin-top: 50px;
@@ -27,10 +27,11 @@
     align-items: center;
 }
 .recButton, .playButton{
-    border-radius: 10px;
+    
     height: 30px;
-    width: 50px;
+    width: 150px;
+    margin: 20px;
 }
 .acriveRec{
-    background-color: orange;
+    background-color: rgb(255, 0, 0);
 }

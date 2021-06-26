@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="card">
+      <div class="card__image-container">
+        <!-- <img class="card__image" src="assets/firewatch.jpg" alt=""> -->
+        <h3 class="text-center my-4">Search for Weather:</h3>
+        <form [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)">
+          <div class="form-group">
+            <input class="form-control" type="text" id="weatherLocation" aria-describedby="weatherLocation"
+              placeholder="Please input a Location" formControlName="location" />
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-danger btn-md"> Search for the weather </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="card right">
+      <h3 class="text-center my-4">Weather Details:</h3>
+      <p class="text-center">Current weather conditions: <span
+          class="font-weight-bold">{{this.weatherData?.current.weather_descriptions}}</span></p>
+      <p class="text-center">Temperature in Degrees Celsius: <span
+          class="font-weight-bold">{{this.weatherData?.current.temperature}}</span></p>
+      <p class="text-center">Pressure in hPa: <span class="font-weight-bold">{{this.weatherData?.current.pressure}}</span>
+      </p>
+      <p class="text-center">Feels like in Degrees Celsius: <span
+          class="font-weight-bold">{{this.weatherData?.current.feelslike}}</span></p>
+      <p class="text-center">Humidity: <span class="font-weight-bold">{{this.weatherData?.current.humidity}}</span></p>
+      <p class="text-center">Location Searched: <span
+          class="font-weight-bold">{{this.weatherData?.location.country}}</span>, <span
+          class="font-weight-bold">{{this.weatherData?.location.name}}</span></p>
+    </div>
+  </div>
