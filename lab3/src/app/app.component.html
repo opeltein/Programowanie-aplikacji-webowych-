@@ -1,0 +1,31 @@
+<div class="content">
+  <div class="places">
+    <div class="place" *ngFor="let response of responses">
+      <p><img [src]="'https://openweathermap.org/img/wn/'+response.weather[0].icon+'@2x.png'" class="image"></p>
+      <p class="name">{{response.name}}</p>
+      <p class="degrees">Temperatura: {{ response.main.temp }}°C</p>
+      <p class="degrees-feel">(Odczuwalna: {{ response.main.feels_like }}°C)</p>
+      <p class="humidity">Wilgotność: {{response.main.humidity }}%</p>
+      <p class="pressure">Ciśnienie {{response.main.pressure }}hPa</p>
+    </div>
+  </div>
+
+  <div class="input">
+    <input type="text" #miasto placeholder="Wpisz nazwe miasto">
+
+    <button (click)="onButtonClick(miasto.value)" class="button">
+      Pokaż pogodę
+    </button>
+  </div>
+
+  <div class="current" *ngIf="currentResponse !== undefined">
+    <div class="place">
+      <p><img [src]="'https://openweathermap.org/img/wn/'+currentResponse.weather[0].icon+'@2x.png'" class="image"></p>
+      <p class="name">{{currentResponse.name}}</p>
+      <p class="degrees">Temperatura: {{ currentResponse.main.temp }}°C</p>
+      <p class="degrees-feel">(Odczuwalna: {{ currentResponse.main.feels_like }}°C)</p>
+      <p class="humidity">Wilgotność: {{currentResponse.main.humidity }}%</p>
+      <p class="pressure">Ciśnienie {{currentResponse.main.pressure }}hPa</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+body {
+  background-image: url('https://wallpaperaccess.com/full/175932.jpg');
+  background-size: cover;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
