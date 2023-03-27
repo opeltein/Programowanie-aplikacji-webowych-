@@ -1,0 +1,19 @@
+<div class="form" #form [style.background]="'#fff'">
+  <div>Tytuł: <input type="text" #title [value]="note.title"></div>
+  <div>Treść: <input type="text" #content [value]="note.content"></div>
+  <div class="colors">
+    <p class="circle white" (click)="form.style.background='#FFF'"></p>
+    <p class="circle red" (click)="form.style.background='#F97B84'"></p>
+    <p class="circle blue" (click)="form.style.background='#5E84B1'"></p>
+    <p class="circle green" (click)="form.style.background='#7EDA6B'"></p>
+  </div>
+  <div><input type="checkbox" #pinned [checked]="isPinned" (change)="onCheckboxChange($event)">Przypnij</div>
+  <button
+    mat-flat-button
+    color="primary"
+    [disabled]="title.value === '' || content.value == ''"
+    (click)="onEditClick(title.value, content.value, form.style.background)"
+  >
+    Dodaj
+  </button>
+</div>

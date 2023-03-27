@@ -1,0 +1,39 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 20px;
+  background: white;
+}
+
+.colors {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.red {
+  background: #F97B84;
+  border: 1px solid black;
+}
+
+.green {
+  background: #7EDA6B;
+  border: 1px solid black;
+}
+
+.blue {
+  background: #5E84B1;
+  border: 1px solid black;
+}
+
+.white {
+  background: white;
+  border: 1px solid black;
+}

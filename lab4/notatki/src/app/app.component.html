@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="pinned-container">
+    <div class="note" [style.background]="note.color" *ngFor="let note of getPinned()">
+      <p class="title">{{note.title}}</p>
+      <p>{{note.content}}</p>
+      <div class="date">
+        <p>{{note.createdAt | date: 'HH:mm:ss'}}</p>
+        <p>{{note.createdAt | date: 'dd/MM/yyyy'}}</p>
+      </div>
+
+      <div mat-fab color="secondary" (click)="onEditClick(note.id)" class="edit-button">
+        <img src="../assets/edit.png" class="edit-icon">
+      </div>
+      <div mat-fab color="accent" (click)="onDeleteClick(note.id)" class="delete-button">
+        x
+      </div>
+    </div>
+  </div>
+
+  <div class="normal-container">
+    <div class="note" [style.background]="note.color" *ngFor="let note of getNotPinned()">
+      <p class="title">{{note.title}}</p>
+      <p class="content">{{note.content}}</p>
+      <div class="date">
+        <p>{{note.createdAt | date: 'HH:mm:ss'}}</p>
+        <p>{{note.createdAt | date: 'dd/MM/yyyy'}}</p>
+      </div>
+
+      <div mat-fab color="secondary" (click)="onEditClick(note.id)" class="edit-button">
+        <img src="../assets/edit.png" class="edit-icon">
+      </div>
+      <div mat-fab color="accent" (click)="onDeleteClick(note.id)" class="delete-button">
+        x
+      </div>
+    </div>
+  </div>
+</div>
+
+<button mat-fab color="primary" (click)="onAddClick()" class="add-button">
+  +
+</button>

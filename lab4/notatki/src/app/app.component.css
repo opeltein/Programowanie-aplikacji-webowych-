@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px 20px;
+  padding: 50px;
+}
+
+.pinned-container {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px 20px;
+  padding: 20px;
+  border-left: 6px solid rgb(77, 76, 75);
+  background: rgba(178, 152, 133, 0.566);
+}
+
+.normal-container {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px 20px;
+  padding: 20px;
+  border-left: 6px solid rgb(77, 76, 75);
+  background: rgba(178, 152, 133, 0.566);
+}
+
+.note {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 20px 20px 5px 20px;
+  width: 150px;
+  min-height: 150px;
+  text-align: center;
+  border-radius: 8px;
+  -webkit-box-shadow: 5px 3px 24px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 5px 3px 24px 0px rgba(66, 68, 90, 1);
+  box-shadow: 5px 3px 24px 0px rgba(66, 68, 90, 1);
+  position: relative;
+  overflow-wrap: break-word;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.content {
+  font-size: 15px;
+  margin-bottom: 45px;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+p {
+  margin: 0;
+}
+
+.add-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.edit-button {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(152, 155, 112);
+  cursor: pointer;
+}
+
+.delete-button {
+  position: absolute;
+  top: 5px;
+  right: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(253, 151, 151);
+  cursor: pointer;
+}
+
+.edit-icon {
+  width: 10px;
+}
